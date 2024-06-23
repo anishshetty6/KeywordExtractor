@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Textarea, Button, useToast } from '@chakra-ui/react'
 
-const TextInput = () => {
+
+const TextInput = ({ extractKeywords }) => {
     const [text, setText] = useState('');
 
     const toast = useToast();
 
-    const submitText = ({ extractKeywords }) => {
+    const submitText = () => {
         if (text == '') {
             toast({
                 title: "Text Field is empty",
